@@ -33,11 +33,11 @@ use ppm_rs::raster::{mandelbrot::Mandelbrot, RasterGenerator};
 
 fn main() {
   let raster_builder = Mandelbrot::new(100).unwrap();
-  let raster = raster_builder.generate(config.width, config.height);
+  let raster = raster_builder.generate(16*600, 9*600);
 
-  let ppm_buf = PPMImageBuffer::new(config.width, config.height, raster)
+  let ppm_buf = PPMImageBuffer::new(16*600, 9*600, raster)
           .expect("Error creating ppm buffer");
-  ppm_buf.write_to_ppm(&config.output_path).expect("Error creating ppm file");
+  ppm_buf.write_to_ppm("output.ppm").expect("Error creating ppm file");
 }
 ```
 
