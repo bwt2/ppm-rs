@@ -4,9 +4,9 @@
 //!
 //! # Example
 //! ```rust
-//! use multibrot_ppm_rs::raster::{multibrot::Multibrot, ViewWindow};
+//! use multibrot_ppm_rs::raster::{multibrot::Multibrot, ViewWindow, RasterGenerator};
 //!
-//! let mb = Multibrot::new(2.0, 100, ViewWindow::default()).unwrap();
+//! let mb = Multibrot::new_with_view(2.0, 100, ViewWindow::default()).unwrap();
 //! let raster = mb.generate(800, 600);
 //! ```
 
